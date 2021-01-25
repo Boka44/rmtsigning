@@ -1,0 +1,512 @@
+
+//All Preset color variables are here
+$primary-font: 'Poppins', sans-serif;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$letter-spacing: 0px;
+$text-color: #585858;
+
+
+ // blue - Now blue
+ $blue: #113A6E;
+ $light-blue: #889DB7;
+
+//Current Preset Declareation
+ $preset:  $blue;
+
+ //Global
+ .white-text {
+	color: white !important;
+ }
+ 
+.mainBox {
+	background-color: white;
+	border-radius: 75px;
+	position: relative;
+	top: 10%;
+	margin: auto;
+	height: 80%;
+	width: 50%;
+	padding: 3%;
+
+}
+
+// #4d2275
+
+body {
+	background-color: $blue;
+	height: 100vh;
+}
+
+.row {
+	margin-left: 0px !important;
+}
+
+
+.logo-container {
+	height: 30%;
+	width: 100%;
+	div {
+		height: 100%;
+		#logo {
+			width: 63%;
+			height: 100%;
+			margin: 0 auto;
+			@media (min-width: 1350px) {
+				width: 43%;
+			}
+
+			img {
+				height: 150%;
+			}
+		}
+	}
+}
+
+.text-container {
+	color: $text-color;
+	font-family: $primary-font;
+	height: 30%;
+	padding: 50px;
+	margin-top: 40px;
+    margin-bottom: 25px;
+
+	div {
+		div:first-child {
+			font-size: 3rem !important;
+		}
+		div:nth-child(2) {
+			font-size: .8rem;
+		}
+		div:nth-child(3) {
+			font-size: .8rem;
+		}
+	}
+}
+
+
+// Gears
+
+#gearsContainer {
+	width: 450px;
+    zoom: .6;
+    margin: 0 auto;
+}
+
+@keyframes gear1 {
+    0% { transform: rotate(0deg) }
+   50% { transform: rotate(22.5deg) }
+  100% { transform: rotate(45deg) }
+}
+.gear1 > div {
+  transform-origin: 100px 100px;
+  animation: gear1 0.2s infinite linear;
+}
+.gear1 > div div {
+    position: absolute;
+    width: 22px;
+    height: 152px;
+    background: $light-blue;
+    left: 100px;
+    top: 100px;
+    transform: translate(-50%,-50%);
+}
+.gear1 > div div:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.gear1 > div div:nth-child(6) {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+}.gear1 > div div:nth-child(3) {
+  transform: translate(-50%,-50%) rotate(45deg)
+}.gear1 > div div:nth-child(4) {
+  transform: translate(-50%,-50%) rotate(90deg)
+}.gear1 > div div:nth-child(5) {
+  transform: translate(-50%,-50%) rotate(135deg)
+}
+.gear1Container {
+  position: relative;
+  left: 5px;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+  
+}
+.gear1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.gear1 div { box-sizing: content-box; }
+
+
+/* Gear 2 */
+
+@keyframes gear2 {
+    0% { transform: rotate(0deg) }
+   50% { transform: rotate(-22.5deg) }
+  100% { transform: rotate(-45deg) }
+}
+.gear2 > div {
+  transform-origin: 100px 100px;
+  animation: gear2 0.2s infinite linear;
+}
+.gear2 > div div {
+    position: absolute;
+    width: 22px;
+    height: 152px;
+    background: $light-blue;
+    left: 100px;
+    top: 100px;
+    transform: translate(-50%,-50%);
+}
+.gear2 > div div:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.gear2 > div div:nth-child(6) {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+}.gear2 > div div:nth-child(3) {
+  transform: translate(-50%,-50%) rotate(45deg)
+}.gear2 > div div:nth-child(4) {
+  transform: translate(-50%,-50%) rotate(90deg)
+}.gear2 > div div:nth-child(5) {
+  transform: translate(-50%,-50%) rotate(135deg)
+}
+.gear2Container {
+  position: relative;
+  top: 45px;
+  right: 90px;
+  zoom: .7;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+.gear2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.gear2 div { box-sizing: content-box; }
+
+/* Gear 3 */
+
+@keyframes gear3 {
+    0% { transform: rotate(0deg) }
+   50% { transform: rotate(22.5deg) }
+  100% { transform: rotate(45deg) }
+}
+.gear3 > div {
+  transform-origin: 100px 100px;
+  animation: gear3 0.2s infinite linear;
+  animation-delay: .1s;
+}
+.gear3 > div div {
+    position: absolute;
+    width: 22px;
+    height: 152px;
+    background: $light-blue;
+    left: 100px;
+    top: 100px;
+    transform: translate(-50%,-50%);
+}
+.gear3 > div div:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.gear3 > div div:nth-child(6) {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+}.gear3 > div div:nth-child(3) {
+  transform: translate(-50%,-50%) rotate(45deg)
+}.gear3 > div div:nth-child(4) {
+  transform: translate(-50%,-50%) rotate(90deg)
+}.gear3 > div div:nth-child(5) {
+  transform: translate(-50%,-50%) rotate(135deg)
+}
+.gear3Container {
+  position: relative;
+  bottom: 130px;
+  right: 300px;
+  zoom: .4;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+.gear3 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.gear3 div { box-sizing: content-box; }
+
+
+.email {
+	position: absolute;
+    color: white;
+    bottom: 15px;
+	margin-left: 43%;
+	font-weight: $bold;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+// Loader
+
+#loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 9999999999;
+}
+.spinner {
+	width: 40px;
+	height: 40px;
+	top: 45%;
+	position: relative;
+	margin: 0px auto;
+}
+.double-bounce1, .double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: $preset;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;	  
+	-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+	animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.double-bounce2 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+	0%, 100% { -webkit-transform: scale(0.0) }
+	50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+	0%, 100% { 
+	transform: scale(0.0);
+	-webkit-transform: scale(0.0);
+	} 50% { 
+	transform: scale(1.0);
+	-webkit-transform: scale(1.0);
+	}
+}
+
+@media (min-width: 1199px) and (max-width: 1337px) {
+	.text-container {
+		color: $text-color;
+		font-family: $primary-font;
+		height: 30%;
+		padding: 50px;
+		margin-top: 40px;
+		margin-bottom: 25px;
+		div {
+			div:first-child {
+				font-size: 2.5rem !important;
+			}
+			div:nth-child(2) {
+				font-size: 1rem;
+			}
+			div:nth-child(3) {
+				font-size: 1rem;
+			}
+		}
+	}
+	
+}
+
+/* only small desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.text-container {
+		color: $text-color;
+		font-family: $primary-font;
+		height: 30%;
+		padding: 50px;
+		margin-top: 40px;
+		margin-bottom: 25px;
+		div {
+			div:first-child {
+				font-size: 2rem !important;
+			}
+			div:nth-child(2) {
+				font-size: 1rem;
+			}
+			div:nth-child(3) {
+				font-size: 1rem;
+			}
+		}
+	}
+	.email {
+		position: absolute;
+		color: white;
+		margin-left: 38%;
+	}
+	
+	
+}
+
+
+/* only small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.mainBox {
+		width: 60%;
+	}
+
+	.logo-container {
+		height: 30%;
+		width: 100%;
+		div {
+			height: 100%;
+			#logo {
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				img {
+					height: 150%;
+				}
+			}
+		}
+	}
+
+	.text-container {
+		color: $text-color;
+		font-family: $primary-font;
+		height: 30%;
+		padding: 50px;
+		margin-top: 40px;
+		margin-bottom: 25px;
+		div {
+			div:first-child {
+				font-size: 2.5rem !important;
+			}
+			div:nth-child(2) {
+				font-size: 1rem;
+			}
+			div:nth-child(3) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.email {
+		position: absolute;
+		color: white;
+		margin-left: 35%;
+	}
+	
+
+}
+
+/* mobile or only mobile */
+@media (max-width: 767px) {
+
+	.text-container {
+		color: $text-color;
+		font-family: $primary-font;
+		height: 30%;
+		padding: 30px;
+		margin-top: -5px;
+		margin-bottom: 80px;
+		div {
+			div:first-child {
+				font-size: 2rem !important;
+			}
+			div:nth-child(2) {
+				font-size: .7rem;
+			}
+			div:nth-child(3) {
+				font-size: .7rem;
+			}
+		}
+	}
+
+	.mainBox {
+		background-color: white;
+		border-radius: 75px;
+		position: relative;
+		top: 10%;
+		margin: auto;
+		height: 78%;
+		width: 90%;
+		padding: 5%;
+		padding-right: 4% !important;
+		padding-left: 4% !important;
+		padding-top: 25px !important;
+	
+	}
+
+	.email {
+		position: absolute;
+		color: white;
+		margin-left: 24%;
+		bottom: 1px;
+	}
+
+	#gearsContainer {
+		// margin-left: 10%;
+		width: 429px;
+		zoom: .4;
+		margin: 0 auto;
+	}
+
+	.gear3Container {
+		width: 175px;
+	}
+
+	
+	.logo-container {
+		height: 30%;
+		width: 100%;
+		div {
+			height: 100%;
+			#logo {
+				width: 100%;
+				height: 100%;
+				margin: 0 auto;
+				img {
+					height: 150%;
+				}
+			}
+		}
+	}
+
+	
+	
+}
