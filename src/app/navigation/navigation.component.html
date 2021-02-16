@@ -1,1 +1,57 @@
-<p>navigation works!</p>
+<div class="nav-right visible-xs">
+    <div class="button" [ngClass]="{'active' : isToggled === true}" id="btn" (click)="toggleSidebar(null)">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+  </div>
+
+
+<nav class="sidebar-container" >
+    <div class="nav-right hidden-xs">
+        <div class="button" [ngClass]="{'active' : isToggled === true}" id="btn" (click)="toggleSidebar(null)">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="../../assets/images/RMT Signing.png">
+    </div>
+    <ul [ngClass]="{'sidebar-list' : isToggled === true}">
+        <li [ngClass]="{'sidebar-item' : isToggled === true}" routerLink="/home" routerLinkActive="active" (click)="toggleSidebar('off')">
+            <a [ngClass]="{'sidebar-anchor' : isToggled === true}">
+                Home
+            </a>
+        </li>
+        <li [ngClass]="{'sidebar-item' : isToggled === true}" routerLink="/id-checklist" routerLinkActive="active" (click)="toggleSidebar('off')">
+            <a [ngClass]="{'sidebar-anchor' : isToggled === true}">
+                ID Checklist
+            </a>
+        </li>
+        <li [ngClass]="{'sidebar-item' : isToggled === true}" routerLink="/loan-signings" routerLinkActive="active" (click)="toggleSidebar('off')">
+            <a [ngClass]="{'sidebar-anchor' : isToggled === true}">
+                Loan Signings
+            </a>
+        </li>
+        <li [ngClass]="{'sidebar-item' : isToggled === true}" routerLink="/faqs" routerLinkActive="active" (click)="toggleSidebar('off')">
+            <a [ngClass]="{'sidebar-anchor' : isToggled === true}">
+                FAQS
+            </a>
+        </li>
+        <li [ngClass]="{'sidebar-item' : isToggled === true}" routerLink="/contact" routerLinkActive="active" (click)="toggleSidebar('off')">
+            <a [ngClass]="{'sidebar-anchor' : isToggled === true}">
+                Contact Us
+            </a>
+        </li>
+    </ul>
+    <div class="contact-info">
+        <p class="phone" name="phone">(619) 323-1574</p>
+        <p class="email" name="email">scheduling@rmtsigning.com</p>
+    </div>
+</nav>
+<main [ngClass]="{'move-to-left' : isToggled === true}">
+    <router-outlet></router-outlet>
+</main>
+
+<footer class="footer"></footer>

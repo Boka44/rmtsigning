@@ -9,6 +9,7 @@ import { IdChecklistComponent } from './id-checklist/id-checklist.component';
 import { LoanSigningsComponent } from './loan-signings/loan-signings.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { ContactComponent } from './contact/contact.component';
     IdChecklistComponent,
     LoanSigningsComponent,
     FaqsComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
