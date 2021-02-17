@@ -3,7 +3,7 @@
 .sidebar-container {
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 16vw;
     background-color: #ffffff;
     position: fixed;
     height: 100vh;
@@ -21,13 +21,22 @@
     .logo {
         margin-bottom: 5vh;
 
-        @media screen and(max-height: 900px) {
-            margin-bottom: 1vh;
-            margin: 0 auto;
+        @media screen and (min-width: 1000px) and (max-width: 1770px) {
+          margin: 0 auto; 
+          width: 75%;
+          margin-bottom: 12vh;
         }
+
+        // @media screen and(max-height: 900px) {
+        //     margin-bottom: 1vh;
+        // }
         
         img {
             width: 300px;
+
+            @media screen and (min-width: 1000px) and (max-width: 1770px) {
+              width: 175px;
+            }
         }
     }
 
@@ -46,12 +55,23 @@
             // margin-right: 3%;
             background-color: white;
             outline: none;
+            margin: 0 0;
+
+            // -webkit-transition: transform .7s ease-in-out;
+            // -moz-transition: transform .7s ease-in-out;
+            // -ms-transition: transform .7s ease-in-out;
+            // -o-transition: transform .7s ease-in-out;
+            // transition: transform .7s ease-in-out;
 
             a {
                 font-family: 'Roboto';
                 color: $primary-color;
                 font-size: 28px;
                 text-decoration: none;
+
+                @media screen and (min-width: 1000px) and (max-width: 1400px) {
+                  font-size: 24px;
+                }
             }
         }
 
@@ -77,6 +97,19 @@
         bottom: 35px;
         width: 100%;
         text-align: center;
+        font-size: 18px;
+
+        @media screen and (min-width: 1401px) and (max-width: 1770px) {
+          p {
+            font-size: 18px;
+          }
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1400px) {
+          p {
+            font-size: 12px;
+          }
+        }
     }
   }
 
@@ -84,7 +117,7 @@
 
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
   -webkit-transition: transform .7s ease-in-out;
   -moz-transition: transform .7s ease-in-out;
@@ -193,11 +226,11 @@ main {
 }
 
 .move-to-left {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-110%);
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  -o-transform: translateX(-110%);
+  transform: translateX(-110%);
 }
 
 nav {
@@ -216,11 +249,11 @@ nav {
 .sidebar-item {
   margin: 30px 0;
 //   opacity: 0;
-  -webkit-transform: translateY(-20px);
-  -moz-transform: translateY(-20px);
-  -ms-transform: translateY(-20px);
-  -o-transform: translateY(-20px);
-  transform: translateY(-20px);
+  // -webkit-transform: translateY(-20px);
+  // -moz-transform: translateY(-20px);
+  // -ms-transform: translateY(-20px);
+  // -o-transform: translateY(-20px);
+  // transform: translateY(-20px);
 }
 
 .sidebar-item:first-child {
@@ -314,5 +347,90 @@ nav {
   }
   .visible-xs {
     display: none;
+  }
+}
+
+
+
+// ******************************************************
+// 
+//  Footer
+// 
+// ******************************************************
+
+.footer {
+  height: 90px;
+  background-color: $primary-color;
+  margin-left: $sidebar-width;
+  padding: 20px;
+  display: flex;
+  z-index: 69;
+  position: absolute;
+
+  p, span {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    p, span{
+      font-size: 14px;
+      color: white;
+      font-family: "Roboto-LightItalic";
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 0px;
+    display: block;
+    
+    height: 180px;
+
+    // p, span{
+    //   font-size: 18px;
+    // }
+  }
+
+  .footer-box1 {
+    width: 75%;
+    padding-right: 25px;
+  
+  
+    p {
+      font-family: "Roboto-LightItalic";
+      color: white;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  .footer-box2 {
+    width: 25%;
+    padding-top: 25px;
+
+    .contact-box {
+      display: flex;
+
+      p {
+        font-family: "Roboto-LightItalic";
+        color: white;
+      }
+
+      span {
+        color: white;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        // margin-bottom: 25px;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      padding-top: 0px;
+      text-align: center;
+    }
   }
 }

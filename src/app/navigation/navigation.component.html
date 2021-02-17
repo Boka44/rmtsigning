@@ -52,6 +52,28 @@
 </nav>
 <main [ngClass]="{'move-to-left' : isToggled === true}">
     <router-outlet></router-outlet>
-</main>
 
-<footer class="footer"></footer>
+
+    <footer class="footer">
+        <div class="footer-box1">
+            <p>Disclaimer - We are not an attorney licensed to practice law in any state, and do not give legal advice or accept fees for legal advice 
+                or legal services. We can not give any advice on preparation, draft, or selection of legal documents.</p>
+            <br>
+            <!-- <br> -->
+            <p class="desktop">Designed and developed by Dev Dragon</p>
+        </div>
+        <div class="footer-box2">
+            <div class="contact-box">
+                <span class="material-icons">phone</span><p class="phone" name="phone">(619) 323-1574</p>
+            </div>
+            <br class="desktop">
+            <div class="contact-box">
+                <span class="material-icons">email</span><p class="email" name="email">scheduling@rmtsigning.com</p>
+            </div>
+            
+        </div>
+        <br class="mobile">
+        <br class="mobile">
+        <p class="mobile">Designed and developed by Dev Dragon</p>
+    </footer>
+</main>

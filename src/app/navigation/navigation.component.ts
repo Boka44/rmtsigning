@@ -15,9 +15,6 @@ export class NavigationComponent implements OnInit {
   isToggled = false;
 
   toggleSidebar(command) {
-      // $(".button").toggleClass("active");
-      // $("main").toggleClass("move-to-left");
-      // $(".sidebar-item").toggleClass("active");
       if(command === 'off') {
         this.isToggled = false;
         return;
