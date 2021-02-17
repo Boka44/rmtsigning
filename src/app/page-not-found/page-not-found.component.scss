@@ -1,0 +1,15 @@
+.ryan {
+    position: fixed;
+    bottom: -725px;
+
+    @media screen and (max-width: 1000px) {
+        right: -65px;
+    }
+    @media screen and (max-width: 700px) {
+        right: -272px;
+    }
+    
+    img {
+        height: 1200px;
+    }
+}

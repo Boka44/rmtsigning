@@ -348,3 +348,15 @@ button {
     width: fit-content;
     margin: 0 auto;
 }
+
+.content-wrapper {
+    width: 80%;
+    font-size: 24px;
+    color: $primary-color;
+    margin: 0 auto;
+    // min-height: 100vh;
+    p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

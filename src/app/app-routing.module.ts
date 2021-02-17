@@ -53,11 +53,19 @@ const routes: Routes = [
           description: ""
         } 
       },
+      { 
+        path: 'page-not-found', 
+        component: PageNotFoundComponent,
+        data: {
+          title: "Oops!",
+          description: ""
+        }
+      },
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
     ]
   },
   // { path: '',   redirectTo: 'home', pathMatch: 'full' }, 
-  { path: '**', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'page-not-found' },
 ];
 
 @NgModule({
