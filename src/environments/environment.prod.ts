@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  contactAPI: 'https://nx13detig3.execute-api.us-west-1.amazonaws.com/production/rmtSigningContactHandler'
 };

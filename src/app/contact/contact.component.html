@@ -6,10 +6,107 @@
         <div class="content-wrapper">
 
             
-            <div class="page-title">
+            <div class="page-title sm-margin-bottom">
                 <h1>Contact Us</h1>
                 <div class="line"></div>
             </div>
+            <p class="italic center no-margin-ver">scheduling@rmtsigning.com</p>
+            <p class="italic center no-margin-ver">(619) 323-1574</p>
+            <p class="center margin-fix">We operate 24 hours a day 7 days week.</p>
+            <p class="center margin-fix">Our agents are independent contractors and required to be bonded with $100,000.00 E&O Insurance.</p>
+            <p class="center margin-fix">We accept cash, and all major credit cards.</p>
+            <p class="center italic margin-fix">Ask about invoice accounts.</p>
+            <br>
+            <br>
+            <div class="contact-block">
+                <form id="contactForm" (ngSubmit)="formSubmit()" #contactForm="ngForm">
+                    
+    
+                       
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control input" id="name" [(ngModel)]="form.name" name="name" #name="ngModel" placeholder="Your Name" required data-error="Please enter your name">
+                            <div [hidden]="name.valid || name.pristine" class="alert">
+                                Name is required
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" placeholder="Your Phone Number" id="phone" class="form-control input" [(ngModel)]="form.phone" name="phone" #phone="ngModel" required data-error="Please enter your phone number">
+                            <div [hidden]="phone.valid || phone.pristine" class="alert">
+                                Phone is required
+                            </div>
+                        </div> 
+                    
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" placeholder="Your Email" id="email" class="form-control input" [(ngModel)]="form.email" name="email" #email="ngModel" required data-error="Please enter your email">
+                            <div [hidden]="email.valid || email.pristine" class="alert">
+                                Email is required
+                            </div>
+                            <div [hidden]="!isEmailInvalid" class="alert">
+                                Valid Email is required
+                            </div>
+                        </div> 
+                
+                      
+      
+                      
+                        <div class="form-group">
+                            <label for="country">Type of Document being Notarized</label>
+                            <input type="text" placeholder="Type of document being notarized" id="typeOfDoc" class="form-control input" [(ngModel)]="form.typeOfDoc" name="noDocs" #typeOfDoc="ngModel" required data-error="Please enter the type of document you need notarized">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Number of Documents being Notarized</label>
+                            <input type="text" placeholder="Number of documents being notarized" id="noDocs" class="form-control input" [(ngModel)]="form.noDocs" name="noDocs" #noDocs="ngModel" required data-error="Please enter the number of documents you need notarized">
+                            <div [hidden]="noDocs.valid || noDocs.pristine" class="alert">
+                                This field is required
+                            </div>
+                        </div> 
+
+                        <div class="form-group">
+                            <label>Type of Notarization</label>
+                            <select id="typeOfNot" name="typeOfNot" [(ngModel)]="form.typeOfNot" name="typeOfNot" #typeOfNot="ngModel" (change)="onChange($event.target.value)">
+                                <option value="acknowledgement">Acknowledgement</option>
+                                <option value="jurat">Jurat</option>
+                                <option value="other">Other</option>
+                            </select>                            <div [hidden]="typeOfNot.valid || typeOfNot.pristine" class="alert">
+                                This field is required
+                            </div>
+                        </div>
+
+                        <div *ngIf="isOther" class="form-group">
+                            <label>Other</label>
+                            <input type="text" placeholder="Enter the type of notarization needed" id="other" class="form-control input" [(ngModel)]="form.other" name="other" #other="ngModel"  data-error="Enter type of notarization needed">
+                            <div [hidden]="other.valid || other.pristine" class="alert">
+                                This field is required
+                            </div>
+                        </div> 
+
+                        <div class="form-group">
+                            <label>Date Notarization Needed</label>
+                            <input type="text" placeholder="Enter the date the notarization is needed" id="dateOfNot" class="form-control input" [(ngModel)]="form.dateOfNot" name="dateOfNot" #dateOfNot="ngModel" required data-error="Enter the date the notarization is needed">
+                            <div [hidden]="dateOfNot.valid || dateOfNot.pristine" class="alert">
+                                This field is required
+                            </div>
+                        </div> 
+                               
+
+                            <div class="submit-button center">
+                                <button *ngIf="!submitted && !contactError" class="" [disabled]="!contactForm.form.valid" id="submit" type="submit">Send Message</button>
+                                <!-- <div id="msgSubmit" class="h3 text-center hidden"></div>  -->
+                                <!-- <div class="clearfix"></div>  -->
+                                <button *ngIf="submitted" class="" id="submit">Sent!</button>
+                                <button *ngIf="contactError" class="alert alert-danger" id="submit">Something went wrong. Try refreshing the page.</button>
+                            </div>
+                
+                
+                </form>
+            </div>
+
+
         </div>
     </section>
 </div>

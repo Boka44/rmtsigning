@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta, Title } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,11 @@ import { LoanSigningsComponent } from './loan-signings/loan-signings.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ContactService } from './contact/contact.service';
+
 
 @NgModule({
   declarations: [
@@ -25,8 +32,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ContactService,
+    Title, 
+    Meta
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
