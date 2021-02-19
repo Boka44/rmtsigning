@@ -1,1 +1,365 @@
 /* You can add global styles to this file, and also import other style files */
+
+// ******************************************************
+// 
+//  Global Variables
+// 
+// ******************************************************
+
+$sidebar-width: 16vw;
+$wrapper-width: 84vw;
+
+// ******************************************************
+// 
+//  Colors
+// 
+// ******************************************************
+
+$primary-color: #113A6E;
+$accent-color: #FEA02F;
+$light-color: #889DB7;
+
+// ******************************************************
+// 
+//  Fonts
+// 
+// ******************************************************
+
+@font-face {
+    font-family: "Roboto";
+    src: url('../src/assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url('../src/assets/fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url('../src/assets/fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url('../src/assets/fonts/Roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-LightItalic";
+    src: url('../src/assets/fonts/Roboto/Roboto-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-MediumItalic";
+    src: url('../src/assets/fonts/Roboto/Roboto-MediumItalic.ttf');
+}
+
+$font: 'Roboto';
+$medium-font: 'Roboto-Medium';
+$font-medium-italic: 'Roboto-MediumItalic';
+$bold-font: 'Roboto-Bold';
+$font-light: "Roboto-Light";
+$font-light-italic: "Roboto-LightItalic";
+
+// ******************************************************
+// 
+//  Global Classes
+// 
+// ******************************************************
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section {
+    width: $wrapper-width;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media screen and (max-width: 1000px) {
+        width: 100vw;
+    }
+}
+
+p {
+    font-family: "Roboto";
+    font-size: 24px;
+    color: $primary-color;
+
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 16px;
+    }
+}
+
+button {
+    margin: 5px;
+    background-color: $accent-color;
+    // box-shadow: 5px 5px 10px rgba($color: grey, $alpha: .3);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    height: 45px;
+    width: 175px; 
+    outline: none;
+    transition: all .7s;
+
+    &:hover {
+        cursor: pointer;
+        // background-color: $primary-color;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+.page-wrapper {
+    margin-left: $sidebar-width;
+    width: $wrapper-width;
+    min-height: 100vh;
+    background-color: white;
+    @media screen and (max-width: 1000px) {
+        margin-left: 0px;
+        width: 100vw;
+    }
+}
+
+.blue-sidebar {
+    height: 100vh;
+    width: 10vw;
+    background-color: $primary-color;
+    position: fixed;
+}
+
+.with-bar {
+    margin-left: 10vw;
+    width: $wrapper-width - 10vw;
+    @media screen and (max-width: 1000px) {
+        margin-left: 0;
+        width: 100vw;
+    }
+}
+
+.with-bar-title {
+    width: $wrapper-width - 10vw !important ; 
+    @media screen and (max-width: 1000px) {
+        width: 100vw !important;
+    }
+}
+
+.titlebar {
+    width: $wrapper-width;
+    background-color: $primary-color;
+    height: 100px;
+
+    @media screen and (max-width: 1000px) {
+        width: 100vw;
+        height: 75px;
+    }
+
+    h2 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+
+        padding: 20px;
+        font-family: 'Roboto';
+        font-size: 50px;
+        font-weight: inherit;
+        color: white;
+        margin: 0 auto;
+        width: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+
+        @media screen and (min-width: 701px) and (max-width: 1000px) {
+            font-size: 30px;
+            padding: 19px;
+        }
+
+        @media screen and (max-width: 700px) {
+            font-size: 18px;
+            padding: 24px;
+        }
+    }
+
+    &:before {
+        width: 25%;
+        background-color: $light-color;
+        height: 100px;
+        display: block;
+        content: "";
+        float: right;
+
+        @media screen and (max-width: 1000px) {
+            height: 75px;
+        }
+    }
+}
+
+.titlebar-inverted {
+    width: $wrapper-width;
+    background-color: $primary-color;
+    height: 100px;
+
+    @media screen and (max-width: 1000px) {
+        width: 100vw;
+        height: 75px;
+    }
+
+    h2 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+
+        padding: 20px;
+        font-family: 'Roboto';
+        font-size: 50px;
+        font-weight: inherit;
+        color: white;
+        margin: 0 auto;
+        width: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+
+        @media screen and (min-width: 701px) and (max-width: 1000px) {
+            font-size: 30px;
+            padding: 19px;
+        }
+
+        @media screen and (max-width: 700px) {
+            font-size: 18px;
+            padding: 24px;
+        }
+    }
+    
+    &:before {
+        width: 20%;
+        background-color: $light-color;
+        height: 100px;
+        display: block;
+        content: "";
+        float: left;
+
+        @media screen and (max-width: 1000px) {
+            height: 75px;
+        }
+    }
+}
+
+.long-title-mod {
+    h2 {
+        font-size: 32px !important;
+        padding: 31px !important;
+    }
+    @media screen and (max-width: 1000px) {
+        h2 {
+            font-size: 18px !important;
+            padding: 26px !important;
+            text-align: center !important;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        h2 {
+            font-size: 18px !important;
+            padding: 17px !important;
+            text-align: center !important;
+        }
+    }
+}
+
+.mobile {
+    display: none;
+    @media screen and (max-width: 1000px) {
+        display: inherit;
+    }
+}
+
+.desktop {
+    display: inherit;
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.page-title {
+    // margin-left: -10%;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1000px) {
+        margin-left: 0;
+    }
+    h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+
+        padding: 20px;
+        font-family: 'Roboto';
+        font-size: 70px;
+        font-weight: inherit;
+        color: $primary-color;
+        margin: 0 auto;
+        // padding-right: 10%;
+        width: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        text-align: center;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 45px;
+            padding: 0;
+            padding-right: 0;
+            // text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 30px;
+            padding: 0;
+            padding-right: 0;
+        }
+    }
+
+    .line {
+        width: 50%;
+        height: 10px;
+        background-color: $accent-color;
+        margin: 0 auto;
+        @media screen and (max-width: 1000px) {
+            height: 5px;
+        }
+    }
+}
+
+.italic {
+    font-family: 'Roboto-LightItalic' !important;
+}
+
+.center {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    width: 80%;
+    font-size: 24px;
+    color: $primary-color;
+    margin: 0 auto;
+    // min-height: 100vh;
+    p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,38 @@
+@import '../../styles.scss';
+
+.content-wrapper {
+    width: 80%;
+    font-size: 24px;
+    color: $primary-color;
+    margin: 0 auto;
+    
+    ul {
+        margin-top: 30px;
+        list-style: none;
+        li {
+            margin-bottom: 30px;
+
+            @media screen and (max-width:1000px) {
+                font-size: 16px;
+            }
+
+            &:before {
+                content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                color: $accent-color; /* Change the color */
+                font-weight: bold; /* If you want it to be bold */
+                display: inline-block; /* Needed to add space between the bullet and the text */
+                width: 1em; /* Also needed for space (tweak if needed) */
+                margin-left: -1em; /* Also needed for space (tweak if needed) */
+            }
+
+        }
+    }
+}
+
+.margin {
+    margin-top: 30px;
+}
+
+.center-text {
+    text-align: center;
+}

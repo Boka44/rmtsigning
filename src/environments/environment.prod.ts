@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  contactAPI: 'https://api.rmtsigning.com/contact/rmtSigningContact'
 };

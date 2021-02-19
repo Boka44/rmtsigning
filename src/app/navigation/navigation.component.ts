@@ -12,4 +12,15 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isToggled = false;
+
+  toggleSidebar(command) {
+      if(command === 'off') {
+        this.isToggled = false;
+        return;
+      }
+
+      this.isToggled = !this.isToggled;
+      return;
+  }
 }
