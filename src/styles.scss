@@ -109,6 +109,7 @@ button {
     height: 45px;
     width: 175px; 
     outline: none;
+    transition: all .7s;
 
     &:hover {
         cursor: pointer;
@@ -360,5 +361,5 @@ button {
         margin-bottom: 30px;
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

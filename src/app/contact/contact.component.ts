@@ -58,8 +58,12 @@ export class ContactComponent implements OnInit {
     message += `\n Date Notarization Needed: ${this.form.dateOfNot}`;
     message += `\n\n\n Praise be! \n-- Reverend Boka Hrboka`;
     
+    const emailObj = {
+      email: this.form.email,
+      message: message
+    }
     
-    this._contactService.sendContactForm(this.form)
+    this._contactService.sendContactForm(emailObj)
       .subscribe((result: any) => {
         if(result.status == 422) {
           this.isEmailInvalid = true

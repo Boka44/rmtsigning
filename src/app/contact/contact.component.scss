@@ -61,4 +61,11 @@
           color: red;
       }
 
+      button {
+          &:disabled {
+              opacity: .5;
+              transform: none;
+          }
+      }
+
 }
