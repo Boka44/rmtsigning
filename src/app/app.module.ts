@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ContactService } from './contact/contact.service';
+import { GoogleAnalyticsService } from './google-analytics.service';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ContactService } from './contact/contact.service';
   ],
   providers: [
     ContactService,
+    GoogleAnalyticsService,
     Title, 
     Meta
   ],
