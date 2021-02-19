@@ -366,7 +366,10 @@ nav {
   display: flex;
   z-index: 69;
   position: absolute;
-
+  a {
+      font-family: "Roboto";
+      color: white;
+    }
   p, span {
     font-size: 18px;
   }
@@ -406,7 +409,9 @@ nav {
   }
   .footer-box2 {
     width: 25%;
-    padding-top: 25px;
+    // padding-top: 25px;
+
+   
 
     .contact-box {
       display: flex;
@@ -423,7 +428,7 @@ nav {
       }
 
       @media screen and (max-width: 1000px) {
-        // margin-bottom: 25px;
+        margin-bottom: 25px;
       }
     }
 

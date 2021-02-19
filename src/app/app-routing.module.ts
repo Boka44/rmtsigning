@@ -18,7 +18,7 @@ const routes: Routes = [
         component: HomeComponent,
         data: {
           title: "Home",
-          description: ""
+          description: "RMT Signing is a leading San Diego Notary service specilizing in speed, accuracy, and customer service."
         } 
       },
       { 
@@ -26,7 +26,7 @@ const routes: Routes = [
         component: IdChecklistComponent,
         data: {
           title: "ID Checklist",
-          description: ""
+          description: "Checklist for valid identification needed for notary stamps."
         } 
       },
       { 
@@ -34,7 +34,7 @@ const routes: Routes = [
         component: LoanSigningsComponent,
         data: {
           title: "Loan Signings",
-          description: ""
+          description: "We are also certified loan signing agents. We can handle all of your needs."
         } 
       },
       { 
@@ -42,7 +42,7 @@ const routes: Routes = [
         component: FaqsComponent,
         data: {
           title: "FAQS",
-          description: ""
+          description: "Frequently asked questions and answers regarding the notarization process."
         } 
       },
       { 
@@ -50,7 +50,7 @@ const routes: Routes = [
         component: ContactComponent,
         data: {
           title: "Contact Us",
-          description: ""
+          description: "Contact us for immediate assistance with your notarization needs."
         } 
       },
       { 
